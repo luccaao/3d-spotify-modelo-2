@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    overflow-x:hidden ;
+    background-color: rgb(58, 57, 57);
+    font-family: "Poppins";
+}
+
+.user {
+    width: 40px;
+    align-self: center;
+    transition: 0.3s ease;
+}
+
+.user:hover {
+    transform: scale(1.1);
+}
+
+
+.logo {
+    width: 150px;
+}
+
+.lista{
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    gap:30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.only {
+    position: relative;
+}
+
+.only::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 5px;
+    transition: 0.3s;
+    
+}
+.only:hover::before {
+    width: 100%;
+    background-color: #191414;
+    height: 5px;
+    
+}
+
+.lista-item:hover{
+     color: black;
+}
+
+nav {
+    justify-content: space-around;
+    display: flex;
+    background-color: #1DB954;
+    width: 100%;
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    
+    margin-bottom: 100px;
+}
+
+.container-conteudo{
+    display: flex;
+    gap: 100px;
+}
+
+.conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    background: #1DB954;
+    font-size: 15px;
+    
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+    border: 0; 
+    cursor: pointer;
+}
+
+button:hover {
+
+    background: rgb(93, 93, 94);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background: rgb(255, 255, 255);
+    border-radius: 50px;
+    
+    box-shadow: 0 4px 150px rgb(145, 144, 144); /* Adiciona uma sombra suave */
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave para a sombra */
+}
+
+.card:hover {
+    box-shadow: 10px 8px 150px #1DB954; /* Aumenta a sombra quando hover */
+}
+
+.card .conteudo {
+    position: relative;
+    height: 100%;
+    
+    padding-top: 50px;
+    left: 0; 
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.5s;
+}
+
+.card .conteudo::before {
+    position: absolute;
+    opacity: 0;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-350px);
+    background: #1DB954;
+    height: 0;
+    transition: 0.3s ease-in;
+    z-index: -1;
+}
+
+
+
+.card .conteudo:hover::before {
+    
+    opacity: 1;
+    transform: translateY(0);
+    height: 100%;
+    background: #191414;
+    border-radius: 50px;
+  }
+.conteudo:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+   margin: 5px 0 20px 0;
+    text-align: center;
+    color: aliceblue;
+}
+
+.img-footer {
+    margin-top: 50px;
+    width: 300px;
+}
